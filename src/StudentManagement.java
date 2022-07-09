@@ -3,17 +3,18 @@ public class StudentManagement {
     private Student[] student = new Student[100];
 
     /**
-     * Constructor 1
+     * Constructor 1.
      */
     public StudentManagement() {
     }
 
     /**
-     * sameGroup(s1,s2)
+     * sameGroup(s1,s2).
      *
-     * @param s1
-     * @param s2
-     * @return
+     * @param s1 Student.
+     * @param s2 Student.
+     * @return true if s1,s2 same.
+     * false if s1,s2 not same.
      */
     public static boolean sameGroup(Student s1, Student s2) {
         if (s1.getGroup().equals(s2.getGroup())) {
@@ -23,9 +24,9 @@ public class StudentManagement {
     }
 
     /**
-     * Add Student to Array
+     * Add Student to Array.
      *
-     * @param newStudent
+     * @param newStudent Student.
      */
     public void addStudent(Student newStudent) {
         for (int i = 0; i < 100; i++) {
@@ -37,9 +38,9 @@ public class StudentManagement {
     }
 
     /**
-     * Sort Student by group
+     * Sort Student by group.
      *
-     * @return
+     * @return String is a list of student.
      */
     public String studentsByGroup() {
         String s = "";
@@ -82,9 +83,9 @@ public class StudentManagement {
     }
 
     /**
-     * Remove Student by id from Array
+     * Remove Student by id from Array.
      *
-     * @param id
+     * @param id is String inputed.
      */
     public void removeStudent(String id) {
         for (int i = 0; i < 100; i++) {
