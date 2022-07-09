@@ -47,26 +47,35 @@ public class StudentManagement {
         String[] groupStudent = new String[100];
         groupStudent[0] = student[0].getGroup();
         for (int i = 1; i < 100; i++) {
-            int j = 0;
-            while (groupStudent[j] != null) {
-                if (student[i].getGroup().equals(groupStudent[j])) {
-                    break;
+            if (student[i] != null) {
+                int j = 0;
+                while (groupStudent[j] != null) {
+                    if (student[i].getGroup().equals(groupStudent[j])) {
+                        break;
+                    }
+                    j++;
                 }
-                j++;
-            }
-            if (j == leng) {
-                groupStudent[leng] = student[i].getGroup();
-                leng++;
+                if (j == leng) {
+                    groupStudent[leng] = student[i].getGroup();
+                    leng++;
+                }
+            } else {
+                break;
             }
 
         }
         for (int i = 0; i < 100; i++) {
             s = s + groupStudent[i] + "\n";
             for (int j = 0; j < 100; j++) {
-                if (student[j].getGroup().equals(groupStudent[i])) {
-                    s = s + student[i].getName() + " - " + student[i].getId() + " - " + student[i].getGroup() + " - " + student[i].getEmail() + "\n";
-                }
+                if (student[j] != null) {
+                    if (student[j].getGroup().equals(groupStudent[i])) {
+                        s = s + student[i].getName() + " - " + student[i].getId() + " - " + student[i].getGroup() + " - " + student[i].getEmail() + "\n";
+                    }
+                } else break;
+
             }
+
+
         }
 
         return s;

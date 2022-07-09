@@ -1,12 +1,12 @@
 public class Main {
     public static void main(String[] args) {
         StudentManagement studentManagement = new StudentManagement();
-        Student student1 = new Student("Vu Van A", "19020807", "vnu.vvv");
-        student1.setGroup("K64H");
-        Student student2 = new Student("Vu Van VB", "1902087", "vnu.vv");
-        student1.setGroup("K64CB");
-        Student student3 = new Student("Vu Van VC", "190208", "vnu.vv");
-        student1.setGroup("K64H");
+        Student student1 = new Student("giang", "19020807", "abc");
+        student1.setGroup("k64H");
+        Student student2 = new Student("giang1", "1313134", "kas");
+        student2.setGroup("k535");
+        Student student3 = new Student("giang2", "103i13", "asdad");
+        student3.setGroup("k64H");
         studentManagement.addStudent(student1);
         studentManagement.addStudent(student2);
         studentManagement.addStudent(student3);
